@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kiali
+  namespace: argocd
+spec:
+  destination:
+    namespace: kiali-test
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: 2-argocd-application
+    repoURL: https://github.com/SebastianJ91/argocd-server-side-apply.git
+    targetRevision: HEAD

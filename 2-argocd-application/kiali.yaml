@@ -1,0 +1,10 @@
+apiVersion: kiali.io/v1alpha1
+kind: Kiali
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-options: ServerSideApply=true,Validate=false,SkipDryRunOnMissingRessource=true
+  name: kiali
+  namespace: kiali-test
+spec:
+  istio_labels:
+    app_label_name: "service.istio-io/canonical-name"

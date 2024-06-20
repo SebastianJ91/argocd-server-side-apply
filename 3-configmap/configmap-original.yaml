@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap
+data:
+  key1: key-original
+  key2: key-original
+  key3: key-original
